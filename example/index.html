@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate Every Imagetype</title>
+
+	<style type="text/css">
+
+		div#preload {
+			display: none;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<!-- Images are (c) by Julia Geiser, geiser.julia@gmail.com -->
+	
+	<div id="image">
+		<img id="Doggy" src="images/DSC02780.jpg" name="Doggy">
+	</div>
+
+	<a href="#" id="run">Run</a>
+	<a href="#" id="halt">Halt</a>
+	<a href="#" id="reverse">Reverse</a>
+	<a href="#" id="toggle">Toggle</a>
+	<a href="#" id="reset">Reset</a>
+	<a href="#" id="next">Next Frame</a>
+	<a href="#" id="last">Last Frame</a>
+
+	<div id="preload">
+		<img src="images/DSC02781.jpg" name="Doggy">
+		<img src="images/DSC02782.jpg" name="Doggy">
+		<img src="images/DSC02783.jpg" name="Doggy">
+		<img src="images/DSC02784.jpg" name="Doggy">
+		<img src="images/DSC02785.jpg" name="Doggy">
+		<img src="images/DSC02786.jpg" name="Doggy">
+		<img src="images/DSC02787.jpg" name="Doggy">
+		<img src="images/DSC02788.jpg" name="Doggy">
+		<img src="images/DSC02789.jpg" name="Doggy">
+		<img src="images/DSC02790.jpg" name="Doggy">
+		<img src="images/DSC02791.jpg" name="Doggy">
+		<img src="images/DSC02792.jpg" name="Doggy">
+		<img src="images/DSC02793.jpg" name="Doggy">
+		<img src="images/DSC02794.jpg" name="Doggy">
+		<img src="images/DSC02795.jpg" name="Doggy">
+		<img src="images/DSC02796.jpg" name="Doggy">
+		<img src="images/DSC02797.jpg" name="Doggy">
+		<img src="images/DSC02798.jpg" name="Doggy">
+		<img src="images/DSC02799.jpg" name="Doggy">
+		<img src="images/DSC02800.jpg" name="Doggy">
+		<img src="images/DSC02801.jpg" name="Doggy">
+		<img src="images/DSC02802.jpg" name="Doggy">
+		<img src="images/DSC02803.jpg" name="Doggy">
+		<img src="images/DSC02804.jpg" name="Doggy">
+		<img src="images/DSC02805.jpg" name="Doggy">
+		<img src="images/DSC02806.jpg" name="Doggy">
+		<img src="images/DSC02807.jpg" name="Doggy">
+		<img src="images/DSC02808.jpg" name="Doggy">
+		<img src="images/DSC02809.jpg" name="Doggy">
+		<img src="images/DSC02810.jpg" name="Doggy">
+	</div>
+
+	<script type="text/javascript" src="js/aei.min.js"></script>
+	<script type="text/javascript">		
+
+		aei.register('Doggy', 100).run();
+
+		var l = document.links;
+
+		for(var a in l){
+			l[a].onclick = function(e){
+
+				e.preventDefault();
+
+				switch(this.id){
+					case 'run': aei.run(); break;
+					case 'halt': aei.halt(); break;
+					case 'reverse': aei.reverse(); break;
+					case 'toggle': aei.toggle(); break;
+					case 'reset': aei.reset(); break;
+					case 'next': aei.nextFrame(); break;
+					case 'last': aei.lastFrame(); break;
+				}
+			}
+		}
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
